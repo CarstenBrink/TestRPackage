@@ -11,7 +11,7 @@
 #'
 #' @examples demo_data(hazard=1.5,censor_hazard=.9,pts=150,maxtime=3,arm=2)
 #'
-demo_data <- function(hazard=1.2,censor_hazard=1,pts=160,maxtime=4,arm=1){
+survivval_demo_data <- function(hazard=1.2,censor_hazard=1,pts=160,maxtime=4,arm=1){
   t1<- -(1/hazard)*log(runif(pts))
   t2<- -(1/censor_hazard)*log(runif(pts))
   index<-t2<t1
