@@ -23,6 +23,6 @@ survivval_demo_data <- function(hazard=1.2,censor_hazard=1,pts=160,maxtime=4,arm
   t[index]=maxtime
   event[index]<-0
   df<-data.frame(cbind(t,event,matrix(arm,pts,1)))
-  colnames(df)<-c('Time','SurEvent','Arm')
+  colnames(df)<-c('Time','Event','Arm')
   return(df)
 }
